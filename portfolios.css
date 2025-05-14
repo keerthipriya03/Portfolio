@@ -1,0 +1,181 @@
+ 
+:root{
+    --primary-color : wheat;
+}
+ 
+ .box{
+    /* margin: 30px 70px 30px 70px;
+    border: 5px solid red;
+    height: auto;
+    border-color: orchid;
+    background: linear-gradient(45deg, #ff6b6b, #f7b733); */
+    /* background: linear-gradient(45deg, #3469e4cd, #d5d1c9); */
+    /* background-color: #e43838bb; */
+    /* background: linear-gradient(45deg, rgb(221, 77, 101), lightgrey); */
+    border: 5px solid rgb(126, 112, 112);
+    color: var(--primary-color);
+    border-color: orchid;
+    background: url(backdrop.jpg)
+    no-repeat center/cover
+} 
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    text-decoration: dashed;
+}
+
+nav{
+    background-color: #333;
+    /* color: #fff; */
+    padding: 1em;
+    text-align: center;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* header section */
+header{
+    display: flex;          /* Use flexbox to align items horizontally */
+    align-items: center;    /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 450px;          /* Optional padding around the header */
+}
+#profile-img {
+    padding-top: 5px;
+    height: 200px;
+    width: 150px;
+    border-radius: 20%;
+}
+.title {
+    margin-left: 30px;
+    font-style: oblique;
+    font-size: 30px;
+}
+
+#about{
+     /* background-color: rgb(237, 162, 219); */
+    background: rgba(0,0,0,0.2);
+    border-radius: 5%;
+    color: var(--primary-color);
+}
+
+#about p{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 200;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#skills h2{
+    margin-left: 30px;
+}
+
+#skills p{
+    /* margin-left: 150px; */
+    font-weight: 200;
+    padding: 5px;
+    font-size: 20px;
+}
+
+#projectss{
+    padding: 7px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+#projectss h2{
+    text-decoration: solid;
+    margin-left: 30px;
+}
+
+#projectss p{
+    text-align: center;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#project{
+    text-align: center;
+}
+
+#profilecod h2{
+    margin-left: 30px;
+}
+
+#profilecod p{
+    /* margin-left: 150px; */
+    font-weight: 200;
+    padding: 5px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #e91a1a;
+}
+
+a:hover{
+    color:rgb(from red r g b);
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+
+#contact-page h2{
+    margin-left: 30px;
+}
+
+footer .foot-panel4 {
+    display: flex;                /* Use Flexbox for horizontal layout */
+    justify-content: space-around; /* Distribute the space between the elements */
+    padding: 5px;
+    align-items: center;           /* Vertically align items in the center */
+}
+
+footer .pages {
+    margin-right: 20px;            /* Optional: Add space between the columns */
+}
+
+footer .pages p, footer .pages a {
+    margin: 0;                     /* Remove default margin */
+}
+
+.tables{
+    display: flex;
+    flex-wrap: wrap;             /* Allow items to wrap to the next row */
+    justify-content: space-around;  /* Distribute items evenly across the container */
+    /* gap: 5px;                   Add space between the items */
+}
+
+.image_skills{
+    height: 100px;
+    width: 100px;
+}
+
+.text{
+    margin-top: 10px;
+}
+
+.image-text-item {
+    display: flex;               /* Each image-text pair is a flex container */
+    flex-direction: column;      /*Stack image and text vertically*/
+    align-items: center;         /* Center the content horizontally */
+    text-align: center;          /* Ensure the text is centered */
+    /* width: 48%;                  Each item takes 48% width */
+    /* box-sizing: border-box;      Include padding/border in width calculations */
+}

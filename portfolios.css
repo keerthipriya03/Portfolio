@@ -1,0 +1,597 @@
+ 
+:root{
+    --primary-color: #3F51B5;
+    --bg-color: #f0f2f5; /* Light grey background */
+    --text-color: #333;
+    --header-bg: #FFFFFF;
+    --nav-bg: skyblue;
+    --section-bg: #FFFFFF;
+    --link-color: #e91a1a;
+    --form-bg: white;
+    --border-color: rgb(126, 112, 112);
+    --project-bg: #fff;
+    --input-border: #ccc;
+    --button-bg: #000;
+    --button-hover-bg: #333;
+    --footer-bg: black;
+    --footer-text: white;
+    
+}
+ 
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+    --primary-color: #BBDEFB; /* Lighter primary color for dark mode */
+    --bg-color: #1a1a2e; /* Dark background */
+    --text-color: #e0e0e0; /* Light text */
+    --header-bg: #16213e;
+    --nav-bg: #0f3460;
+    --section-bg: #16213e;
+    --link-color: #87CEEB; /* Lighter blue for links */
+    --form-bg: #0f3460;
+    --border-color: #3e4451;
+    --project-bg: #0f3460;
+    --input-border: #555;
+    --input-focus-border: #64b5f6;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --footer-bg: #0a0a0a;
+    --footer-text: #b0b0b0;
+}
+
+body{
+    font-family: serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.box{
+    margin: 30px 70px 30px 70px;
+    border: 5px solid var(--border-color);
+    border-color: orchid;
+    max-width: 1200px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-color); 
+} 
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: var(--primary-color);
+}
+h2{
+    font-size: 30px;
+    margin-left: 20px;
+    color: var(--primary-color);
+}
+nav{
+    background-color: var(--nav-bg);
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #0f0f0f; /* Gold on hover */
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 30px; /* Make it a square for the icon */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+/* Basic icon for the toggle button */
+#theme-toggle::before {
+    content: "☀"; /* Sun for light mode */
+}
+
+[data-theme='dark'] #theme-toggle::before {
+    content: "🌙"; /* Moon for dark mode */
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* header section */
+header{
+    display: flex;          /* Use flexbox to align items horizontally */
+    align-items: center;    /* Vertically center the items */
+    justify-content: flex-start; /* Align items to the left */
+    padding-left: 450px;          /* Optional padding around the header */
+    background-color: var(--header-bg);
+    flex-wrap: wrap;
+    text-align: center;
+}
+#profile-img {
+    height: 200px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px; /* Space between image and text on small screens */
+    border: 3px solid var(--primary-color);
+}
+.title {
+    margin-left: 30px;
+    font-style: oblique;
+    font-size: 1.8em;
+    color: var(--text-color);
+}
+.title p {
+    margin: 5px 0;
+}
+.title p:last-child{
+    color: blueviolet;
+}
+
+#about{
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 10px; /* Reduced border-radius */
+    margin-top: 20px;
+    color: var(--primary-color);
+}
+
+#about p{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    font-size:1.1em;
+    font-weight: 200;
+    padding: 5px;
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+#skills h2{
+    margin-left: 30px;
+    text-align: center;
+}
+#skills p{
+    /* margin-left: 150px; */
+    font-weight: 200;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center skills items */
+    gap: 20px; /* Increased gap */
+    padding: 20px 0;
+}
+
+.image-text-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--section-bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 120px; /* Fixed width for skill items */
+}
+
+.image_skills {
+    width: 80px; /* Adjusted size */
+    height: 80px; /* Adjusted size */
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.image-text-item p {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Projects Section */
+#projectss {
+    padding: 20px;
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    margin-top: 20px;
+}
+
+#projectss h2 {
+    text-align: center;
+    margin-left: 0;
+}
+
+.project-intro {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Reduced gap for better flow */
+}
+
+.pro {
+    flex: 0 0 320px; /* Fixed width for project cards, allowing wrap */
+    background-color: var(--project-bg);
+    border-radius: 15px; /* Softer border-radius */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pro:hover {
+    transform: translateY(-5px);
+}
+
+.pro .main-img img {
+    height: 200px; /* Adjusted image size for better card fit */
+    width: 100%; /* Make image fill container width */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.pro .details .item {
+    font-size: 1.5em; /* Adjusted font size */
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pro .details p {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--text-color); /* Ensure text color adapts */
+}
+
+#project-list {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+}
+
+#project-list a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#project-list a:hover {
+    color: var(--primary-color);
+}
+
+
+/* Contact Section */
+#contact {
+    background-color: var(--section-bg);
+    padding: 30px 20px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.contact-heading {
+    text-align: center;
+    font-size: 3em; /* Adjusted font size */
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.profile {
+    display: flex;
+    flex-direction: row; /* Stack vertically by default */
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.backdrop img {
+    max-height: 400px; /* Control image height */
+    width: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-page {
+    background-color: var(--form-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 550px; /* Max width for form */
+}
+
+.form-page label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-page input,
+.form-page textarea {
+    width: calc(100% - 32px); /* Account for padding */
+    padding: 16px;
+    font-size: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 0.7rem;
+    margin-bottom: 1.5rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    background-color: var(--bg-color); /* Input background color */
+    color: var(--text-color); /* Input text color */
+}
+
+.form-page input:focus,
+.form-page textarea:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.form-page button {
+    width: 100%;
+    background-color: var(--button-bg);
+    color: white;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-page button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.find-me-text {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Increased gap */
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.social-icon {
+    width: 50px; /* Slightly larger icons */
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .foot-panel4 {
+    display: flex;
+    justify-content: center; /* Center content in footer */
+    align-items: center;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger phones (600px - 1024px) */
+@media (max-width: 1024px) {
+    .box {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav items */
+        padding: 0.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li {
+        margin: 8px 0;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .title {
+        margin-left: 0;
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    .image-text-item {
+        width: 100px;
+        padding: 10px;
+    }
+
+    .image_skills {
+        width: 70px;
+        height: 70px;
+    }
+
+    .project-intro {
+        font-size: 1.1em;
+    }
+
+    .pro {
+        flex: 0 0 calc(50% - 30px); /* Two projects per row */
+        max-width: unset; /* Remove max-width override */
+    }
+
+    .profile {
+        flex-direction: column; /* Stack image and form */
+    }
+
+    .backdrop img {
+        max-height: 300px;
+    }
+
+    .form-page {
+        width: 90%;
+        max-width: 450px;
+    }
+}
+
+/* Smaller phones (less than 600px) */
+@media (max-width: 600px) {
+    .box {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    #profile-img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .title {
+        font-size: 1.2em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+
+    .image-text-item {
+        width: 80px;
+        padding: 8px;
+    }
+
+    .image_skills {
+        width: 60px;
+        height: 60px;
+    }
+
+    .project-intro {
+        font-size: 1em;
+    }
+
+    .pro {
+        flex: 0 0 90%; /* One project per row */
+    }
+
+    .pro .main-img img {
+        height: 180px;
+    }
+
+    .pro .details .item {
+        font-size: 1.3em;
+    }
+
+    .contact-heading {
+        font-size: 2.2em;
+    }
+
+    .form-page {
+        padding: 1.5rem;
+    }
+
+    .form-page input,
+    .form-page textarea {
+        padding: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .form-page button {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}

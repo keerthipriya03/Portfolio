@@ -123,7 +123,7 @@ function Projects() {
           <div className="project-details">
             <h3>
               <a 
-                href="https://dhanasri-2k6.github.io/Crop-Fit/" 
+                href="https://crop-fit.vercel.app/" 
                 target="_blank" 
                 rel="noreferrer" 
                 style={{ color: "inherit", textDecoration: "none" }}

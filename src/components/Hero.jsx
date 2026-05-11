@@ -1,4 +1,5 @@
 import './page.css'
+import profileImage from "../images/profile.webp";
 
 function Hero() {
   return (
@@ -63,9 +64,7 @@ function Hero() {
       </div>
 
       <div className="hero-right">
-        {/* FIX 7: /hero.png is correct IF the file exists in your /public folder.
-            If the image still breaks, check that hero.png is inside the /public directory. */}
-        <img src="/hero.png" alt="Developer illustration" />
+        <img src={profileImage} alt="Profile" />
       </div>
     </section>
   );

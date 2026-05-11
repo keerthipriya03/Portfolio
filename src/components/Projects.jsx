@@ -137,9 +137,14 @@ function Projects() {
             </p>
 
             {/* Tech stack as badges/buttons */}
-            <div className="tech-stack">
-              <span className="tech-badge">React.js</span>
+            <div className="tech-stack"> HTML, CSS, JavaScript, TensorFlow.js, Machine Learning, Image Processing, JSON
+              <span className="tech-badge">HTML</span>
+              <span className="tech-badge">CSS</span>
               <span className="tech-badge">JavaScript</span>
+              <span className="tech-badge">TensorFlow.js</span>
+              <span className="tech-badge">Machine Learning</span>
+              <span className="tech-badge">Image Processing</span>
+              <span className="tech-badge">JSON</span>
             </div>
           </div>
           {/* Right side */}

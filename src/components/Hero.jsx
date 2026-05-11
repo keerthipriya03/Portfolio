@@ -1,26 +1,4 @@
-// function Hero() {
-//   return (
-//     <section className="hero">
-//       <div className="hero-left">
-//         <h1>Hi, I am Keerthi Priya </h1>
-
-//         <p>
-//           Full Stack Developer passionate about learning and building web apps.
-//         </p>
-
-//         <p>📍 Visakhapatnam, India</p>
-//       </div>
-
-//       <div className="hero-right">
-//         <img src="/hero.png" alt="hero" />
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Hero;
-
-
+import './page.css'
 
 function Hero() {
   return (
@@ -30,7 +8,9 @@ function Hero() {
         <h1>Hi , I am Keerthi Priya 👋</h1>
 
         <p>
-          Full Stack Developer passionate about learning and building web apps.
+          An aspiring full-stack developer with a passion
+        for creating dynamic and user-friendly websites. I enjoy learning new
+        technologies and building real-world projects.
         </p>
 
         {/* FIX 5: location wrapped in a div for icon + text alignment */}
@@ -41,7 +21,7 @@ function Hero() {
 
         {/* FIX 6: social icons row (add your real hrefs) */}
         <div className="social-icons">
-          <a href="https://github.com" target="_blank" rel="noreferrer" title="GitHub">
+          <a href="https://github.com" target="https://github.com/keerthipriya03" rel="noreferrer" title="GitHub">
             {/* GitHub SVG — no external CDN needed */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
@@ -56,7 +36,7 @@ function Hero() {
               24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" title="LinkedIn">
+          <a href="https://linkedin.com" target="https://linkedin.com/in/keerthi-priya-dwarampudi-094b302a1" rel="noreferrer" title="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452H17.21v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 
               0-2.136 1.445-2.136 2.939v5.667H9.987V9.756h3.12v1.561h.043c.434-.823 
@@ -67,7 +47,7 @@ function Hero() {
               24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" title="Twitter">
+          <a href="https://twitter.com" target="https://twitter.com/keerthipriya03" rel="noreferrer" title="Twitter">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
               <path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 
               2.163-2.723 9.99 9.99 0 0 1-3.127 1.195 4.929 4.929 0 0 

@@ -1,0 +1,367 @@
+:root {
+  --bg: #f4f6f8;
+  --section-bg: #ffffff;
+  --alt-section-bg: #eef2f7;
+  --text: #111111;
+  --card: rgba(255, 255, 255, 0.9);
+  --primary: #6c63ff;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --section-bg: #181818;
+  --alt-section-bg: #121212;
+  --text: #ffffff;
+  --card: rgba(255, 255, 255, 0.08);
+  --primary: #00ffd5;
+}
+
+[data-theme="light"] {
+  --text: #111111;
+}
+
+[data-theme="dark"] {
+  --text: #ffffff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar a,
+.profiles a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-right img {
+  width: 400px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ================= SECTIONS ================= */
+section {
+  width: 100%;
+  padding: 80px 40px;
+  background: var(--section-bg);
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+section:nth-child(even) {
+  background: var(--alt-section-bg);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= ABOUT ================= */
+#about {
+  text-align: center;
+}
+
+/* ================= SKILLS ================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.skill-card {
+  background: var(--card);
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= PROFILES ================= */
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profiles a {
+  padding: 10px 20px;
+  background: var(--card);
+  border-radius: 10px;
+}
+
+/* ================= PROJECTS ================= */
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 60px 0;
+  padding: 40px;
+  background: var(--card);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.project-card img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.project-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* ================= CONTACT ================= */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  width: 100%;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.contact-container button {
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ================= TEXT ================= */
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+}
+
+.skill-card,
+.project-card,
+.contact-container {
+  color: var(--text);
+}
+
+/* ================= BACK TO TOP ================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card,
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+
+  .contact-container form {
+    width: 100%;
+  }
+}
+
+/* ===== PASTE THESE INTO YOUR App.css ===== */
+
+/* Navbar logo */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+/* Navbar right cluster — links + toggle + resume button */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-right ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+/* Theme toggle button */
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text);
+  transition: 0.3s;
+  padding: 0;
+}
+
+/* Resume button — bordered style */
+.resume-btn {
+  padding: 8px 20px;
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  color: var(--text) !important;
+  font-weight: 600;
+  background: transparent;
+  transition: 0.3s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-btn:hover {
+  background: var(--text);
+  color: var(--bg) !important;
+}
+
+/* Hero location row */
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
+  opacity: 0.8;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--text);
+  transition: 0.3s;
+  display: flex;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+.navbar h2 , .codingprofile h2 , .exp h2{
+  color: var(--text);
+}
+#skills h2 , #projects h2 , #contact h2{
+  color: var(--text);
+}
